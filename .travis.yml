@@ -27,8 +27,7 @@ jobs:
 
     # this job do deploy maven repository
     # unit tests (openjdk11)
-    - jdk: openjdk11
-      env:
+    - env:
         - DESC="tests and deploy"
         - CMD="mvn -e --no-transfer-progress clean integration-test failsafe:verify
           -DargLine='-Xms1024m -Xmx2048m'"
